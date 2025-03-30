@@ -1,0 +1,13 @@
+#ASK THE USER FOR PRICE & DISCOUNT
+price = int(input("Input price: "))
+discount = int(input("Input discount in %: "))
+
+def calculate_discount(original_price, discount_percent):
+    if discount > 19:
+        dec = discount_percent / 100
+        new_price = original_price - (dec * original_price)
+        print (f"Your new price is {new_price}")
+    else:
+        print (f"{discount_percent}% is too low f0r this operation")
+    
+calculate_discount(original_price=price, discount_percent=discount)
